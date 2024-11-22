@@ -14,6 +14,14 @@ mypy = "^1.13.0"
 django-stubs = "^5.1.1"
 coverage = "^7.6.7"
 
+[tool.django-stubs]
+django_settings_module = "config.settings"
+
+[tool.mypy]
+plugins = ["mypy_django_plugin.main"]
+
+[tool.isort]
+profile = "black"
 
 [build-system]
 requires = ["poetry-core"]
